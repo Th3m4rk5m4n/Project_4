@@ -1,0 +1,109 @@
+import turtle
+
+# Set up the turtle window with a specific width and height
+turtle.setup(width=600, height=500)
+
+# Reset the turtle to its initial state
+turtle.reset()
+
+# Hide the turtle icon
+turtle.hideturtle()
+
+# Set the speed of the turtle (0 is the fastest)
+turtle.speed(0)
+
+# Set the background color of the turtle window to black
+turtle.bgcolor('black')
+
+# Initialize variables
+c = 0
+x = 0
+
+# Define a list of colors
+colors = [
+    # Reddish colors
+    (1.00, 0.00, 0.00), (1.00, 0.03, 0.00), (1.00, 0.05, 0.00), (1.00, 0.07, 0.00), (1.00, 0.10, 0.00),
+    (1.00, 0.12, 0.00), (1.00, 0.15, 0.00), (1.00, 0.17, 0.00), (1.00, 0.20, 0.00), (1.00, 0.23, 0.00),
+    (1.00, 0.25, 0.00), (1.00, 0.28, 0.00), (1.00, 0.30, 0.00), (1.00, 0.33, 0.00), (1.00, 0.35, 0.00),
+    (1.00, 0.38, 0.00), (1.00, 0.40, 0.00), (1.00, 0.42, 0.00), (1.00, 0.45, 0.00), (1.00, 0.47, 0.00),
+#orangey colors
+(1.00, 0.50, 0.00),(1.00, 0.53, 0.00),(1.00, 0.55, 0.00),(1.00, 0.57, 0.00),(1.00, 0.60, 0.00),(1.00, 0.62, 0.00),
+(1.00, 0.65, 0.00),(1.00, 0.68, 0.00),(1.00, 0.70, 0.00),(1.00, 0.72, 0.00),(1.00, 0.75, 0.00),(1.00, 0.78, 0.00),
+(1.00, 0.80, 0.00),(1.00, 0.82, 0.00),(1.00, 0.85, 0.00),(1.00, 0.88, 0.00),(1.00, 0.90, 0.00),(1.00, 0.93, 0.00),
+(1.00, 0.95, 0.00),(1.00, 0.97, 0.00),
+#yellowy colors
+(1.00, 1.00, 0.00),(0.95, 1.00, 0.00),(0.90, 1.00, 0.00),(0.85, 1.00, 0.00),(0.80, 1.00, 0.00),(0.75, 1.00, 0.00),
+(0.70, 1.00, 0.00),(0.65, 1.00, 0.00),(0.60, 1.00, 0.00),(0.55, 1.00, 0.00),(0.50, 1.00, 0.00),(0.45, 1.00, 0.00),
+(0.40, 1.00, 0.00),(0.35, 1.00, 0.00),(0.30, 1.00, 0.00),(0.25, 1.00, 0.00),(0.20, 1.00, 0.00),(0.15, 1.00, 0.00),
+(0.10, 1.00, 0.00),(0.05, 1.00, 0.00),
+#greenish colors
+(0.00, 1.00, 0.00),(0.00, 0.95, 0.05),(0.00, 0.90, 0.10),(0.00, 0.85, 0.15),(0.00, 0.80, 0.20),(0.00, 0.75, 0.25),
+(0.00, 0.70, 0.30),(0.00, 0.65, 0.35),(0.00, 0.60, 0.40),(0.00, 0.55, 0.45),(0.00, 0.50, 0.50),(0.00, 0.45, 0.55),
+(0.00, 0.40, 0.60),(0.00, 0.35, 0.65),(0.00, 0.30, 0.70),(0.00, 0.25, 0.75),(0.00, 0.20, 0.80),(0.00, 0.15, 0.85),
+(0.00, 0.10, 0.90),(0.00, 0.05, 0.95),
+#blueish colors
+(0.00, 0.00, 1.00),(0.05, 0.00, 1.00),(0.10, 0.00, 1.00),(0.15, 0.00, 1.00),(0.20, 0.00, 1.00),(0.25, 0.00, 1.00),(0.30, 0.00, 1.00),
+(0.35, 0.00, 1.00),(0.40, 0.00, 1.00),(0.45, 0.00, 1.00),(0.50, 0.00, 1.00),(0.55, 0.00, 1.00),(0.60, 0.00, 1.00),(0.65, 0.00, 1.00),
+(0.70, 0.00, 1.00),(0.75, 0.00, 1.00),(0.80, 0.00, 1.00),(0.85, 0.00, 1.00),(0.90, 0.00, 1.00),(0.95, 0.00, 1.00)
+    # ... Rest of the color values
+]
+
+# Loop until x reaches 1000
+while x < 1000:
+    # Convert the value of c to an integer and use it as an index to get the color from the colors list
+    idx = int(c)
+    color = colors[idx]
+
+    # Set the turtle color to the current color
+    turtle.color(color)
+
+    # Move the turtle forward by x units
+    turtle.forward(x)
+
+    # Rotate the turtle right by 98 degrees
+    turtle.right(98)
+
+    # Increase the value of x by 1
+    x = x + 1
+
+    # Increase the value of c by 0.1
+    c = c + 0.1
+
+# Exit the turtle graphics window when the user clicks on it
+turtle.exitonclick()
+
+
+
+"""Import the turtle module, which provides a turtle graphics environment.
+
+Set up the turtle window with a width of 600 pixels and a height of 500 pixels.
+
+Reset the turtle to its initial state.
+
+Hide the turtle icon.
+
+Set the speed of the turtle to the fastest (speed 0).
+
+Set the background color of the turtle window to black.
+
+Initialize variables c and x to 0.
+
+Define a list of colors. Each color is represented as a tuple of RGB values ranging from 0 to 1.
+
+Enter a while loop that continues until x reaches 1000.
+
+Inside the loop, convert the value of c to an integer and use it as an index to get the corresponding color from the colors list.
+
+Set the turtle's color to the current color.
+
+Move the turtle forward by x units.
+
+Rotate the turtle right by 98 degrees.
+
+Increase the value of x by 1.
+
+Increase the value of c by 0.1.
+
+Repeat the loop until x reaches 1000.
+
+Exit the turtle graphics window when the user clicks on it.""""
